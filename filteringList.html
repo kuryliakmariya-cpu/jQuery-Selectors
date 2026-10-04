@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Filtering List</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!-- Бо без неї симвод $() працювати не буде-->
+	<script>
+		// чекає, поки вся HTML-сторінка завантажиться. Лише після цього виконується код всередині.
+		$(document).ready(function(){
+			$("#myInput").on("keyup", function(){
+				var value = $(this).val().toLowerCase();
+				$("#myList li").filter(function(){
+					$(this).toggle(
+						$(this).text().toLowerCase().indexOf(value) > -1
+					);
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<input id="myInput" type="text" placeholder="Search..">
+	<br>
+
+	<ul id="myList">
+	  <li>First item</li>
+	  <li>Second item</li>
+	  <li>Third item</li>
+	  <li>Fourth</li>
+	</ul>
+	
+</body>
+</html>

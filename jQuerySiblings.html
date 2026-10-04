@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.siblings * {
+			display: block;
+			border: 2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// $("h2").siblings().css({"color": "red", "border": "2px solid red"});
+			// $("h2").siblings("span").css({"color": "red", "border": "2px solid red"});
+			// $("h2").next().css({"color": "red", "border": "2px solid red"});
+			// $("h2").nextAll().css({"color": "red", "border": "2px solid red"});
+			// $("h2").nextUntil("h6").css({"color": "red", "border": "2px solid red"});
+			// $("h2").prev().css({"color": "red", "border": "2px solid red"});
+			// $("h2").prevAll().css({"color": "red", "border": "2px solid red"});
+			// $("h6").prevUntil("h2").css({"color": "red", "border": "2px solid red"});
+			// $("div").first().css("background-color", "yellow");
+			// $("div").last().css("background-color", "yellow");
+			// $("div").eq(1).css("background-color", "yellow");
+			// $("p").filter(".intro").css("background-color", "yellow");
+			$("p").not(".intro").css("background-color", "yellow");
+
+		});
+	</script>
+</head>
+<body class="siblings">
+	<!-- <div>div (parent)
+		<p>p</p>
+		<span>span</span>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<h4>h4</h4>
+		<h5>h5</h5>
+		<h6>h6</h6>
+		<p>p</p>
+	</div>
+ -->
+	<h1>Welcome to my homepage</h1>
+	<p>This is a paragraph.</p>
+
+	<div style="border: 1px solid green;">
+		<p>A paragraph in a div.</p>
+		<p>Another paragraph in a div.</p>
+	</div>
+
+	<div style="border: 1px solid green;">
+		<p>A paragraph in a div.</p>
+		<p>Another paragraph in a div.</p>
+	</div>
+
+	<div style="border: 1px solid green;">
+		<p>A paragraph in a div.</p>
+		<p>Another paragraph in a div.</p>
+	</div>
+	<p>My Home</p>
+	<p class="intro">I live in Lviv.</p>
+	<p class="intro">I like Lviv.</p>
+	<p>My lesson </p>
+
+</body>
+</html>

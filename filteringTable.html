@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Table</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("#myInput").on("keyup", function(){
+				var value = $(this).val().toLowerCase();
+				$("#myTable tr").filter(function(){
+					$(this).toggle(
+						$(this).text().toLowerCase().indexOf(value) > -1);
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<input id="myInput" type="text" placeholder="Search...">
+	<br>
+	<br>
+	<table>
+		<thead>
+			<tr>
+				<th>Firstname</th>
+				<th>Lastname</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody id="myTable">
+			<tr>
+				<td>Mariya</td>
+				<td>Kuryliak</td>
+				<td>kuryliakmariya@gmail.com</td>
+			</tr>
+			<tr>
+				<td>Nick</td>
+				<td>Kanakadze</td>
+				<td>nkankadze2011@gmail.com</td>
+			</tr>
+			<tr>
+				<td>Ivan</td>
+				<td>Markiv</td>
+				<td>ivan@gmail.com</td>
+			</tr>
+			<tr>
+				<td>Olena</td>
+				<td>Doe</td>
+				<td>olena@gmail.com</td>
+			</tr>
+		</tbody>
+
+	</table>
+</body>
+</html>

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 1px auto;
+    width: 70%;
+    background-image: url(imac-macbook-pro-broadwell.png);
+    height: 650px;
+    background-size: 100% 100%;
+    background-position: 100% 100%;
+    padding: 34px 40px 100px 40px;
+}
+
+body {
+    background: rgb(75, 104, 255);
+    background: radial-gradient(circle, rgba(75, 104, 255, 1) 26%, rgba(38, 23, 23, 1) 83%);
+}
+
+.tv {
+    width: 100%;
+    height: 420px;
+    display: flex;
+    background-color: #ffffff;
+}
+
+p {
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.tvPiss {
+    width: 50%;
+    border: 1px solid #000;
+    height: 100%;
+    display: flex;
+    padding: 30px;
+}
+
+.part1 {
+    display: flex;
+    flex-flow: column;
+}
+
+.part2 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.doxText {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 10px;
+    border-bottom: 2px solid #000;
+
+}
+
+#text {
+    width: 100%;
+    margin-top: 15px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+#recipient>form{
+    display: flex;
+    flex-direction: column;
+}
+#recipient{
+    overflow: auto;
+}
+label{
+    margin: 3px 0;
+}
+
+.addTask {
+    text-align: center;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    /* color:#1c2025 ; */
+}
+
+#botton {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #33393f;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+
+form {
+    margin: 10px 0;
+}
+
+/* Error */
+.error {
+    display: none;
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.15);
+   
+}
+
+.allert {
+    width: 700px;
+    height: 100px;
+    background-color: #f6d7da;
+    margin: 100px auto;
+    padding: 12px;
+    border-radius: 5px;
+}
+.allert p{
+    color:#925c6a;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#wrappCross{
+    font-weight: 900;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+#cross{
+    width: 15px;
+    height: 15px;
+}
+i{
+    background-image: url(img1.png);
+    background-color: #f6d7da;
+    width: 15px;
+    height: 15px;
+}

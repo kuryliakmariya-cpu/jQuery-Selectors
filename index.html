@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- errors divs -->
+    <div class="error" id="error1">
+        <div class="allert">
+            <div id="wrappCross">
+                <p>Попередження!</p>
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <p id="emptyString">Пусте поле не можна додати.</p>
+        </div>
+    </div>
+    <div class="error" id="error2">
+        <div class="allert">
+            <div id="wrappCross">
+                <p>Попередження!</p>
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <p id="emptyString">Останній таск із списку ви не можете видалити.</p>
+        </div>
+    </div>
+    <!-- /errors divs -->
+    <div class="wrapper">
+        <div class="tv">
+            <!-- left part of scrin -->
+            <div class="tvPiss part1">
+                <p>Список завдань</p>
+                <div id="user">
+                    <form action="">
+                        <label for="">
+                            <input type="checkbox">
+                            <span>HTML5</span>
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>CSS3</span>
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>SASS/SCSS</span>
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            <span>Bootstrap</span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <!-- /left part of scrin -->
+            <!-- right part of scrin -->
+            <div class="tvPiss part2">
+                <div class="doxText">
+                    <p class="addTask">Додати нове завдяння</p>
+                    <form action="#">
+                        <input type="text" id="text">
+
+                    </form>
+                </div>
+                <input type="button" id="botton" value="Добавити">
+            </div>
+            <!-- /right part of scrin -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

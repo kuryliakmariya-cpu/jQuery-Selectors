@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("h5:lang(it)").css("background-color", "yellow");
+			$(":root").css("background-color", "seagreen");
+			$('p:visible').css("background-color", "blue");
+			$('p:hidden').show(3500);
+			$("p:contains(is)").css("background-color", "yellow");
+			$('input').focus();
+			$(':focus').css("background-color", "yellow");
+			$('p:has(span)').css("border", "solid red");
+			$(':empty').css("background-color", "green");
+			$('td:parent').css("background-color", "yellow");
+			function aniDiv(){
+				$(".div1:eq(0)").animate({width: "50%"}, "slow");
+				$(".div1:eq(0)").animate({width: "100%"}, "slow", aniDiv);
+			}
+			aniDiv();
+			$(".btn1").click(function(){
+				$(":animated").css("background-color", "red");
+			});
+			$("[id]").css("background-color", "orange");
+			$("[id=choose]").css("background-color", "lightgreen");
+			$("[class!='intro']").css("font-size", "30px");
+			$("a[href$='.org']").css("background-color", "yellow");
+			$("p[title|='Tomorrow']").css("background-color", "blue");
+			$("input[name*='nation']").css("background-color", "seagreen");
+			$(":password").css("background-color", "red");
+			$(":radio").wrap("<span style='background-color:red'></span>");
+			$(":checkbox").wrap("<span style='background-color:red'></span>");
+			$(":selected").css("background-color", "red");
+			$(":checked").wrap("<span style='background-color:yellow'></span>");
+
+		});
+	</script>
+</head>
+<body>
+
+	<form action="">
+		Name: <input type="text" name="user"><br>
+		ID: <input type="text" name="id" disabled="disabled"><br>
+		Age: 
+		<select disabled="disabled">
+			<option>20-30</option>
+			<option>30-50</option>
+			<option>50+</option>
+		</select>
+		Car:
+		<select>
+			<option>Volvo</option>
+			<option selected="selected">Saab</option>
+			<option>Mercedes</option>
+			<option>Audi</option>
+		</select><br>
+		Password: <input type="password" name="password"><br>
+		Image: <input type="image" src="imac-macbook-pro-broadwell.png" width="31" height="30">
+		File: <input type="file" name="myfile"><br>
+		Male: <input type="radio" name="state" value="m"><br>
+		Female: <input type="radio" name="state" value="f"><br>
+		I have a bike: <input type="checkbox" name="vehicle" value="Bike"><br>
+		I have a car: <input type="checkbox" name="vehicle" value="Car"><br>
+		I have an airplane: <input type="checkbox" name="vehicle" value="Airplane"><br>
+		<button type="button">Useless Button</button>
+		<input type="button" value="Another useless button"><br>
+		<input type="reset" value="Reset">
+		<input type="submit" value="Submit"><br>
+	</form>
+
+	<input name="nationality" type="text" value="Chinese"><br>
+	<input name="nation" type="text" value="English"><br>
+	<input name="country" type="text" value="Germany"><br>
+	<input name="anothernation" type="text" value="Norwegian">
+	<p>This selector selects all input fields with the attribute name that starts with 'nation'.</p>
+	<a href="htttp://www.w3schools.com">w3schools.com</a><br>
+	<a href="http://www.google.com">Google.com</a><br>
+	<a href="http://www.wikipedia.org">wikipedia.org</a>
+	<p>I live in Italy.</p>
+	<h5 lang="it">Ciao bella!</h5>
+	<p style="display: none;">This is a hidden paragraph that is slowly shown.</p>
+	<input type="text"/>
+	<p>I <i>like</i> <b>jQuery</b>!</p>
+	<h1>Welcome to My Homepage</h1>
+	<p class="intro">My name is Mariya.</p>
+	<p id="intro">I live in Lviv.</p>
+	<p>My best friend is Oksana.</p>
+	<p>Who is your favourite:</p>
+	<p class="demo">This paragraph has class "demo".</p>
+	<p class="end">This paragraph has class "end".</p>
+	<h2>Nice to meet you</h2>
+	<div style="background: blue;">Very nice indeed.</div>
+	<p>I'm fine, <span>thanks.</span></p>
+
+	<ul id="choose">
+		<li>Goofy</li>
+		<li>Mickey</li>
+		<li>Pluto</li>		
+	</ul>
+
+	<p>Welcome to My Web Page</p>
+
+	<table border="1">
+		<tr>
+			<th>Company</th>
+			<th>Contact</th>
+			<th>Country</th>
+			<th>Service</th>
+		</tr>
+		<tr>
+			<td>Alfreds FutterKiste</td>
+			<td></td>
+			<td>Germay</td>
+			<td>good</td>
+		</tr>
+		<tr>
+			<td>Berglunds</td>
+			<td>Christina Berglund</td>
+			<td>Ukraine</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Centro comercial</td>
+			<td>Francisco Chang</td>
+			<td>Mexico</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Ernst Handel</td>
+			<td>Roland Mendel</td>
+			<td>Austria</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Island Trading</td>
+			<td>Helen Bennett</td>
+			<td>UK</td>
+			<td>good</td>
+		</tr>
+
+	</table>
+
+	<div style="border: 1px solid;">
+		<p>The first paragraph in div.</p>
+		<p>The last paragraph in div.</p>
+	</div><br>
+
+	<p>The first paragraph in another div (and the 3rd child in this div, counting from the last child).</p>
+	<p>The first paragraph in another div.</p>
+	<p>The last paragraph in another div.</p>
+
+	<div style="border:1px solid;">
+		<span>This is a span element.</span>
+		<p>The first paragraph in another div (and the 3rd child in this div, counting from the last child).</p>
+		<p>The first paragraph in another div.</p>
+		<p>The last paragraph in another div.</p>
+		<div>
+			<p>The third paragraph in another div.</p>
+		</div>
+	</div>
+
+	<div style="border: 1px solid;">
+		<p>It is only child.</p>
+	</div>
+
+	<p>The last paragraph in body.</p>
+
+
+	<button class="btn1">Change color of the animated element</button>
+
+	<div class="div1" style="background: blue;">
+		Div 1
+	</div>
+	<div style="background: green;">
+		Div 2
+	</div>
+	<div style="background: yellow;">
+		Div 2
+	</div>
+
+	<p title="Tomorrow">This is a paragraph.</p>
+	<p title="tomorrow">This is a paragraph.</p>
+	<p title="Tom">This is a paragraph.</p>
+	<p title="See You Tomorrow">This is a paragraph.</p>
+	<p title="Tomorrow-the day after today">This is a paragraph.</p>
+	<p>This selector selects all elements 
+	with a title attribute value equal to 
+	'Tomorrow', or starting with 'Tomorrow'
+	followed by a hyphen.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
